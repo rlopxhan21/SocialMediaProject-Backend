@@ -1,0 +1,32 @@
+{% load i18n %}
+{% block subject %}
+{% blocktrans %}Account activation on Lopxhan Site{% endblocktrans %}
+{% endblock subject %}
+
+{% block text_body %}
+{% trans "Hi {{ first_name }}," %}
+{% blocktrans %}You're receiving this email because you need to finish activation process on Lopxhan Site.{% endblocktrans %}
+
+{% trans "Please click on following link to activate your account:" %}
+{{ protocol }}://{{ domain }}/{{ url|safe }}
+
+{% trans "Thanks for using our site!" %}
+
+
+{% blocktrans %}From the Lopxhan team{% endblocktrans %}
+{% trans "@rlopxhan21 | Ronish Lopxhan" %}
+{% endblock text_body %}
+
+{% block html_body %}
+<p>Hi {{ first_name }},</p>
+<p>{% blocktrans %}You're receiving this email because you need to finish activation process on Lopxhan Site.{% endblocktrans %}</p>
+
+<p>{% trans "Please click on following link to activate your account:" %}</p>
+<p><a href="{{ protocol }}://{{ domain }}/{{ url|safe }}">{{ protocol }}://{{ domain }}/{{ url|safe }}</a></p>
+
+<p>{% trans "Thanks for using our site!" %}</p>
+
+<p>{% blocktrans %}From the Lopxhan team,{% endblocktrans %}</p>
+<p>{% blocktrans %}@rlopxhan21 | Ronish Lopxhan{% endblocktrans %}</p>
+
+{% endblock html_body %}

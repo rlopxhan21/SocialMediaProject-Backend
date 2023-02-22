@@ -1,0 +1,24 @@
+{% load i18n %}
+
+{% block subject %}
+{% blocktrans %}Lopxhan Site - Your account has been successfully created and activated!{% endblocktrans %}
+{% endblock %}
+
+{% block text_body %}
+{% trans "Your account has been created and is ready to use!" %}
+
+{% trans "Thanks for using our site!" %}
+
+{% blocktrans %}From the Lopxhan team{% endblocktrans %}
+{% trans "@rlopxhan21 | Ronish Lopxhan" %}
+{% endblock text_body %}
+
+{% block html_body %}
+<p>{% trans "Your account has been created and is ready to use!" %}</p>
+
+<p>{% trans "Thanks for using our site!" %}</p>
+
+<p>{% blocktrans %}From the Lopxahan team{% endblocktrans %}</p>
+<p>{% blocktrans %}@rlopxhan21 | Ronish Lopxhan{% endblocktrans %}</p>
+
+{% endblock html_body %}
